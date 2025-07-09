@@ -102,15 +102,104 @@
     </tbody>
   </table>
 
-  <div class="exo">
-    <h2>🎮 Mini-exercice</h2>
+ <div class="exo">
+  <h2>🎮 Entraînement interactif : Adjectifs & Adverbes</h2>
+  <form id="adjectif-form">
     <ol>
-      <li>Souligne les adjectifs : <br><em>Le petit chat noir dort sur le canapé moelleux.</em></li>
-      <li>Souligne les adverbes : <br><em>Il joue doucement et parle lentement.</em></li>
-      <li>Complète avec un adjectif : <br><em>Ma sœur est très ________.</em></li>
-      <li>Complète avec un adverbe : <br><em>Elle danse ________.</em></li>
+      <li>
+        Complète avec un adjectif :<br>
+        <em>Mon chien est très <input type="text" name="adj1" placeholder="...">.</em>
+      </li>
+      <li>
+        Complète avec un adverbe :<br>
+        <em>Il court <input type="text" name="adv1" placeholder="..."> dans le jardin.</em>
+      </li>
+      <li>
+        Choisis l'adjectif approprié :<br>
+        <em>Ce gâteau est <select name="adj2">
+          <option value="">-- Choisir --</option>
+          <option value="délicieux">délicieux</option>
+          <option value="vite">vite</option>
+          <option value="lentement">lentement</option>
+        </select></em>
+      </li>
+      <li>
+        Choisis l'adverbe approprié :<br>
+        <em>Elle parle <select name="adv2">
+          <option value="">-- Choisir --</option>
+          <option value="gentil">gentil</option>
+          <option value="fortement">fortement</option>
+          <option value="jolie">jolie</option>
+        </select></em>
+      </li>
+      <li>
+        Transforme l'adjectif en adverbe :<br>
+        <em><strong>rapide</strong> → <input type="text" name="adv3" placeholder="...">.</em>
+      </li>
+      <li>
+        Trouve l'adjectif caché :<br>
+        <em>Ce jeu est amus___. <input type="text" name="adj3" placeholder="...">.</em>
+      </li>
     </ol>
-  </div>
+    <button type="submit">✅ Vérifier mes réponses</button>
+  </form>
+  <div id="result"></div>
+</div>
+
+<script>
+  const correctAnswers = {
+    adj1: "gentil",
+    adv1: "vite",
+    adj2: "délicieux",
+    adv2: "fortement",
+    adv3: "rapidement",
+    adj3: "amusant"
+  };
+
+  document.getElementById('adjectif-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    let score = 0;
+    let total = Object.keys(correctAnswers).length;
+    let resultHtml = '<h3>Résultats :</h3><ul>';
+
+    Object.keys(correctAnswers).forEach(name => {
+      const input = form[name];
+      const value = input.value ? input.value.trim().toLowerCase() : form[name].value;
+      const isCorrect = value === correctAnswers[name];
+      form[name].style.borderColor = isCorrect ? 'green' : 'red';
+      score += isCorrect ? 1 : 0;
+      resultHtml += `<li>${name} : ${isCorrect ? '✅' : `❌ (${correctAnswers[name]})`}</li>`;
+    });
+
+    resultHtml += `</ul><p>Score : ${score}/${total}</p>`;
+    document.getElementById('result').innerHTML = resultHtml;
+  });
+</script>
 
 </body>
+<button onclick="notifyCompletion('Cours : adjectifs')">✅ J’ai terminé cette page</button>
+
+<script>
+  function notifyCompletion(page) {
+    fetch('https://kaylon-school.vercel.app/api/notify-finished', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        page: page,
+        date: new Date().toLocaleString()
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === 'sent') {
+        alert('📩 Notification envoyée à maman !');
+      } else {
+        alert('❌ Erreur lors de l’envoi.');
+      }
+    });
+  }
+</script>
 </html>
