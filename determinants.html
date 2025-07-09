@@ -107,13 +107,151 @@
     <li><strong>joli</strong> chien ❌ (\"joli\" est un adjectif)</li>
   </ul>
 
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Déterminants - Exercice interactif</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f7f7f7;
+    }
+    .exo {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 700px;
+      margin: auto;
+    }
+    input[type="text"] {
+      padding: 5px;
+      margin-top: 5px;
+      width: 80%;
+    }
+    .result {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #190B40;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2d1666;
+    }
+  </style>
+</head>
+<body>
   <div class="exo">
-    <h2>🎮 Mini-exercice</h2>
-    <ol>
-      <li>Dans la phrase <em>« Mon frère mange une pomme »</em>, quels sont les déterminants ?</li>
-      <li>Dans la phrase <em>« Ces enfants sont gentils »</em>, quel mot montre ce qu’on désigne ?</li>
-      <li>Entoure les déterminants : <strong>Un chat, des étoiles, le soleil, sa robe, notre voiture</strong></li>
-    </ol>
+    <h2>🎮 Mini-exercice interactif : Déterminants</h2>
+    <form id="quiz-form">
+      <ol>
+        <li>
+          Dans la phrase <em>« Mon frère mange une pomme »</em>, quels sont les déterminants ?<br>
+          <input type="text" name="q1" placeholder="Ta réponse ici" />
+        </li>
+        <li>
+          Dans la phrase <em>« Ces enfants sont gentils »</em>, quel mot montre ce qu’on désigne ?<br>
+          <input type="text" name="q2" placeholder="Ta réponse ici" />
+        </li>
+        <li>
+          Entoure les déterminants : <strong>Un chat, des étoiles, le soleil, sa robe, notre voiture</strong><br>
+          <input type="text" name="q3" placeholder="Liste les déterminants ici" />
+        </li>
+      </ol>
+      <button type="button" onclick="checkAnswers()">Vérifier</button>
+      <div id="results" class="result"></div>
+    </form>
   </div>
+
+  <script>
+    function checkAnswers() {
+      const form = document.getElementById("quiz-form");
+      const q1 = form.q1.value.toLowerCase().replace(/\s/g, "");
+      const q2 = form.q2.value.toLowerCase().trim();
+      const q3 = form.q3.value.toLowerCase().replace(/\s/g, "");
+
+      let score = 0;
+      const results = [];
+
+      if (q1.includes("mon") && q1.includes("une")) {
+        score++;
+        results.push("✅ Question 1 : Bonne réponse");
+      } else {
+        results.push("❌ Question 1 : Ce sont 'mon' et 'une'");
+      }
+
+      if (q2 === "ces") {
+        score++;
+        results.push("✅ Question 2 : Bonne réponse");
+      } else {
+        results.push("❌ Question 2 : C’est 'ces'");
+      }
+
+      if (
+        q3.includes("un") &&
+        q3.includes("des") &&
+        q3.includes("le") &&
+        q3.includes("sa") &&
+        q3.includes("notre")
+      ) {
+        score++;
+        results.push("✅ Question 3 : Bonne réponse");
+      } else {
+        results.push("❌ Question 3 : Ce sont 'un', 'des', 'le', 'sa', 'notre'");
+      }
+
+      document.getElementById("results").innerHTML = `Résultat : ${score}/3<br>` + results.join("<br>");
+
+      // Envoi des résultats
+      fetch("/api/submit-answers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          module: "determinants",
+          answers: {
+            q1: form.q1.value,
+            q2: form.q2.value,
+            q3: form.q3.value,
+          },
+        }),
+      });
+    }
+  </script>
 </body>
+<button onclick="notifyCompletion('Cours : Déterminants')">✅ J’ai terminé cette page</button>
+
+<script>
+  function notifyCompletion(page) {
+    fetch('https://kaylon-school.vercel.app/api/notify-finished', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        page: page,
+        date: new Date().toLocaleString()
+      })
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.status === 'sent') {
+        alert('📩 Notification envoyée à maman !');
+      } else {
+        alert('❌ Erreur lors de l’envoi.');
+      }
+    });
+  }
+</script>
 </html>
