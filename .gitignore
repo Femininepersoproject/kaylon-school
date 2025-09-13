@@ -1,0 +1,4 @@
+# Fichiers d’environnement
+.env.local
+.env.production
+.env.development
