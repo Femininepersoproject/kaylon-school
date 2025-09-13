@@ -26,10 +26,43 @@ body {
   max-width: 900px;
   margin-inline: auto;
 }
+/* ✨ NAVIGATION : style lisible sur fond image */
+nav a {
+  color: white !important;
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  padding: 0.5rem 0.8rem;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+}
 
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #6ed3cf !important; /* turquoise clair */
+}
+
+/* ✏️ Textes en surimpression sur fond image */
+body.index h1,
+body.index h2,
+body.index h3,
+body.index p,
+body.index span,
+body.index .highlight,
+body.index .button {
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Optionnel : barre de navigation semi-transparente */
+nav {
+  background-color: rgba(0, 0, 0, 0.4); /* fond sombre flouté */
+  backdrop-filter: blur(4px);
+  padding: 1rem;
+  border-radius: var(--radius);
+}
 /* 🌌 Appliqué uniquement à index.html (page principale de chaque matière) */
 body.index {
-  background-image: url('https://res.cloudinary.com/diapyc6q1/image/upload/v1757740557/demon_slayer_kvmmz6.webp');
+  background-image: url('https://res.cloudinary.com/diapyc6q1/image/upload/v1757741337/HD-wallpaper-demon-slayer-manga-anime-kny_bcktgx.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
