@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>📘 Module spécial : Les verbes en anglais</title>
+  <link rel="stylesheet" href="/style/module-style.css">
+</head>
+<body>
+  <nav class="dashboard-nav">
+    <a href="../index.html">🏠 Sommaire</a>
+    <a href="module1.html">🇬🇧 Anglais 1</a>
+    <a href="module2.html">🧾 Anglais 2</a>
+  </nav>
+
+  <main>
+    <h1>📘 Les verbes & la conjugaison en anglais</h1>
+
+    <section class="lesson">
+      <h2>🌀 Leçon – What is conjugation?</h2>
+      <p>Conjuguer, c’est adapter un verbe selon <strong>qui</strong> fait l’action et <strong>quand</strong> elle se passe.</p>
+      <p><strong>Exemple en français :</strong> Je mange, tu manges, il mange.</p>
+      <p><strong>En anglais :</strong> C’est plus simple ! On ajoute juste un <code>-s</code> pour <code>he / she / it</code>.</p>
+      <p>Ex. : <code>I eat</code> / <code>He eats</code></p>
+    </section>
+
+    <section class="verbs-table">
+      <h2>📋 Verbes essentiels au présent simple</h2>
+      <table>
+        <thead>
+          <tr><th>Infinitif</th><th>I</th><th>You</th><th>He/She/It</th><th>We</th><th>You (pl.)</th><th>They</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>to be</td><td>am</td><td>are</td><td>is</td><td>are</td><td>are</td><td>are</td></tr>
+          <tr><td>to have</td><td>have</td><td>have</td><td>has</td><td>have</td><td>have</td><td>have</td></tr>
+          <tr><td>to go</td><td>go</td><td>go</td><td>goes</td><td>go</td><td>go</td><td>go</td></tr>
+          <tr><td>to eat</td><td>eat</td><td>eat</td><td>eats</td><td>eat</td><td>eat</td><td>eat</td></tr>
+          <tr><td>to play</td><td>play</td><td>play</td><td>plays</td><td>play</td><td>play</td><td>play</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="exercise" id="ex1">
+      <h2>🧠 Exercice 1 — Verbe to be</h2>
+      <form>
+        <p>1. I <select id="q1">
+          <option value="">---</option>
+          <option value="is">is</option>
+          <option value="am">am</option>
+          <option value="are">are</option>
+        </select> a Pokémon trainer.</p>
+
+        <p>2. He <select id="q2">
+          <option value="">---</option>
+          <option value="is">is</option>
+          <option value="are">are</option>
+          <option value="am">am</option>
+        </select> very strong.</p>
+
+        <p>3. You <select id="q3">
+          <option value="">---</option>
+          <option value="is">is</option>
+          <option value="are">are</option>
+          <option value="am">am</option>
+        </select> ready.</p>
+
+        <p>4. They <select id="q4">
+          <option value="">---</option>
+          <option value="is">is</option>
+          <option value="are">are</option>
+          <option value="be">be</option>
+        </select> in the garden.</p>
+
+        <button type="button" onclick="checkEx1()">Vérifier</button>
+      </form>
+      <div id="result-ex1"></div>
+    </section>
+
+    <section class="exercise" id="ex2">
+      <h2>🍔 Exercice 2 — Verbe to eat</h2>
+      <form>
+        <p>1. I <select id="q5">
+          <option value="">---</option>
+          <option value="eat">eat</option>
+          <option value="eats">eats</option>
+        </select> rice.</p>
+
+        <p>2. She <select id="q6">
+          <option value="">---</option>
+          <option value="eat">eat</option>
+          <option value="eats">eats</option>
+        </select> noodles.</p>
+
+        <p>3. They <select id="q7">
+          <option value="">---</option>
+          <option value="eat">eat</option>
+          <option value="eats">eats</option>
+        </select> mango.</p>
+
+        <p>4. He <select id="q8">
+          <option value="">---</option>
+          <option value="eat">eat</option>
+          <option value="eats">eats</option>
+        </select> sushi.</p>
+
+        <button type="button" onclick="checkEx2()">Vérifier</button>
+      </form>
+      <div id="result-ex2"></div>
+    </section>
+<!-- 📘 CHAPITRE SPÉCIAL – Partie 2 : Exercices de conjugaison -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Conjugaison anglaise – Partie 2</title>
+  <link rel="stylesheet" href="/style/module-style.css">
+</head>
+<body>
+  <main>
+    <h1>📘 Conjugaison anglaise – Exercices (Part 2)</h1>
+
+    <section id="ex3" class="exercise">
+      <h2>🕹️ Exercice 3 — Verbes mélangés</h2>
+      <ol>
+        <li>We ___ Pokémon cards. (to collect)<br>
+          <select id="q1">
+            <option value="">-- Choisir --</option>
+            <option value="a">collect</option>
+            <option value="b">collects</option>
+          </select>
+        </li>
+        <li>My brother ___ video games. (to play)<br>
+          <select id="q2">
+            <option value="">-- Choisir --</option>
+            <option value="a">play</option>
+            <option value="b">plays</option>
+          </select>
+        </li>
+        <li>Nya and I ___ together. (to go)<br>
+          <select id="q3">
+            <option value="">-- Choisir --</option>
+            <option value="a">go</option>
+            <option value="b">goes</option>
+          </select>
+        </li>
+        <li>My mom ___ a smoothie. (to have)<br>
+          <select id="q4">
+            <option value="">-- Choisir --</option>
+            <option value="a">have</option>
+            <option value="b">has</option>
+          </select>
+        </li>
+      </ol>
+      <button onclick="checkEx3()">Vérifier</button>
+      <div id="result-ex3"></div>
+    </section>
+
+    <section id="ex4" class="exercise">
+      <h2>
+  </main>
+    <script src="/api/anglais-verbes.js"></script>
+</body>
+</html>
