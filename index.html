@@ -1,61 +1,184 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sommaire - Kaylen Education</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kaylon Education – Sommaire</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   <style>
+    :root {
+      --bg: #f6fdf9;
+      --text: #1b1b1b;
+      --muted: #666;
+      --primary: #567d46; /* vert kaki */
+      --secondary: #a6e3c8; /* vert pastel très clair */
+      --accent: #c3a2d5; /* mauve */
+      --highlight: #88d9d3; /* turquoise */
+      --radius: 22px;
+      --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #f7f4f1;
-      color: #333;
-      padding: 2rem;
-      max-width: 800px;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      background-color: var(--secondary);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #d4f0e2;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      color: var(--primary);
+    }
+
+    .dashboard-nav {
+      background-color: var(--highlight);
+      padding: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .dashboard-nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      background: white;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .dashboard-nav a:hover {
+      background-color: var(--accent);
+      color: white;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
       margin: auto;
     }
-    h1 {
-      color: #5d3a00;
-      text-align: center;
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
     }
-    ul {
-      list-style: none;
-      padding: 0;
+
+    .card {
+      background-color: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      transition: transform 0.2s ease;
     }
-    li {
-      background: #fff;
-      margin: 1rem 0;
-      padding: 1rem;
-      border-left: 5px solid #d0882b;
-      border-radius: 5px;
-      transition: all 0.2s ease;
+
+    .card:hover {
+      transform: translateY(-5px);
     }
-    li:hover {
-      background: #fcefdc;
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      margin-bottom: 10px;
     }
-    a {
+
+    .card a {
+      display: inline-block;
+      margin-top: 12px;
+      background-color: var(--accent);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-weight: 600;
       text-decoration: none;
-      color: #5d3a00;
-      font-weight: bold;
-      font-size: 1.1rem;
+    }
+
+    .card a:hover {
+      background-color: var(--primary);
     }
   </style>
 </head>
 <body>
-    <nav style="text-align:center; margin-bottom: 2rem;">
-  <a href="index.html">🏠 Sommaire</a> |
-  <a href="determinants.html">📘 Déterminants</a> |
-  <a href="adjectifs.html">📘 Adjectifs & Adverbes</a> |
-  <a href="planning.html">🗓️ Planning</a>
-</nav>
-  <h1>📚 Sommaire - Kaylon Education</h1>
-  <p>Bienvenue Kaylen ! Clique sur un cours pour commencer :</p>
+  <header>
+    <h1>🎓 Kaylon Education</h1>
+    <a href="planning.html" class="card-btn" style="background: var(--accent); color: white; padding: 10px 20px; border-radius: 30px; font-weight: 600; text-decoration: none;">🗓️ Voir le planning</a>
+  </header>
 
-  <ul>
-    <li><a href="determinants.html">📝 Les Déterminants</a></li>
-    <li><a href="adjectifs.html">🎨 Les Adjectifs et les Adverbes</a></li>
-    <!-- Tu peux ajouter d'autres liens ici plus tard -->
-  </ul>
+  <nav class="dashboard-nav">
+    <a href="index.html">🏠 Sommaire</a>
+    <a href="francais/determinants.html">📘 Déterminants</a>
+    <a href="francais/adjectifs.html">🧠 Adjectifs & Adverbes</a>
+    <a href="francais/module2-accords.html">🧩 Accords</a>
+    <a href="anglais/module1.html">🇬🇧 Anglais 1</a>
+    <a href="anglais/module2.html">🧾 Anglais 2</a>
+    <a href="maths/module1.html">🧮 Maths 1</a>
+    <a href="maths/module2.html">📏 Maths 2</a>
+    <a href="maths/module3.html">🧠 Maths 3</a>
+  </nav>
 
-  <p>Bonne exploration et amuse-toi bien avec tes cours ! 💡</p>
+  <section class="section">
+    <h2 style="font-family: 'Playfair Display'; font-size: 24px;">Bienvenue Kaylon !</h2>
+    <p>Clique sur un cours pour commencer 🎯</p>
+
+    <div class="card-grid">
+      <div class="card">
+        <h3>📘 Les Déterminants</h3>
+        <a href="francais/determinants.html">Commencer</a>
+      </div>
+      <div class="card">
+        <h3>🎨 Les Adjectifs</h3>
+        <a href="francais/adjectifs.html">Commencer</a>
+      </div>
+      <div class="card">
+        <h3>🧠 Les Accords</h3>
+        <a href="francais/module2-accords.html">Commencer</a>
+      </div>
+      <div class="card">
+        <h3>✍️ Module 3 Français</h3>
+        <a href="francais/module3.html">Lire</a>
+      </div>
+      <div class="card">
+        <h3>✍️ Module 4 Français</h3>
+        <a href="francais/module4.html">Lire</a>
+      </div>
+      <div class="card">
+        <h3>✍️ Module 5 Français</h3>
+        <a href="francais/module5.html">Lire</a>
+      </div>
+      <div class="card">
+        <h3>🇬🇧 Anglais – Parler de ce que j’aime</h3>
+        <a href="anglais/module1.html">Commencer</a>
+      </div>
+      <div class="card">
+        <h3>🧾 Anglais – Résumer un animé</h3>
+        <a href="anglais/module2.html">Commencer</a>
+      </div>
+      <div class="card">
+        <h3>🧮 Maths – Module Logique</h3>
+        <a href="maths/module1.html">Faire les exos</a>
+      </div>
+      <div class="card">
+        <h3>📏 Maths – Opérations utiles</h3>
+        <a href="maths/module2.html">Faire les exos</a>
+      </div>
+      <div class="card">
+        <h3>🧠 Maths – Équations logiques</h3>
+        <a href="maths/module3.html">Faire les exos</a>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
