@@ -1,0 +1,138 @@
+<!-- MODULE 2 – GÉRER UN BUDGET DE LA JOURNÉE -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<section id="module2" class="module">
+  <h1>📘 Module 2 – Gérer un budget de la journée</h1>
+  <p class="intro">Apprendre à faire des choix, gérer une somme, et réfléchir comme un mini-nomade responsable.</p>
+
+  <!-- Partie 1 : Histoire immersive -->
+  <div class="story">
+    <h2>🌀 Le défi des 300 bahts</h2>
+    <p>« Aujourd’hui, tu as 300 bahts à dépenser comme tu veux. Mais attention : tu dois manger, te déplacer, te faire plaisir ET garder un peu de monnaie. »</p>
+  </div>
+
+  <!-- Partie 2 : La leçon Sakura -->
+  <div class="lesson">
+    <h2>📖 La Leçon</h2>
+    <ul>
+      <li>💡 Chaque achat = tu retires de ton budget</li>
+      <li>🧠 Si tu dépenses tout maintenant = plus rien plus tard</li>
+      <li>📏 Tu dois savoir combien il te reste, comparer, anticiper</li>
+    </ul>
+  </div>
+
+  <!-- Partie 3 : Exercices interactifs -->
+  <div class="exo">
+    <h2>✏️ Exercice 1 — Ton menu du jour</h2>
+    <p>Choisis 1 repas + 1 boisson + 1 dessert sans dépasser 120 bahts.</p>
+    <form id="exo1-form">
+      <label>Repas :
+        <select id="meal-select">
+          <option value="0">-- Choisir --</option>
+          <option value="45">Riz sauté (45₹)</option>
+          <option value="60">Soupe Pho (60₹)</option>
+        </select>
+      </label>
+      <label>Boisson :
+        <select id="drink-select">
+          <option value="0">-- Choisir --</option>
+          <option value="35">Smoothie banane (35₹)</option>
+        </select>
+      </label>
+      <label>Dessert :
+        <select id="dessert-select">
+          <option value="0">-- Choisir --</option>
+          <option value="30">Crêpe chocolat (30₹)</option>
+          <option value="20">Gâteau vapeur (20₹)</option>
+        </select>
+      </label>
+      <p>Total : <span id="total-budget">0</span> ₹</p>
+      <button type="button" onclick="checkMenuBudget()">Vérifier</button>
+      <p id="exo1-feedback"></p>
+    </form>
+  </div>
+
+  <div class="exo">
+    <h2>🧠 Exercice 2 — Planifie ta journée</h2>
+    <form id="exo2-form">
+      <fieldset>
+        <legend>Petit-déjeuner</legend>
+        <label><input type="radio" name="breakfast" value="35">Banane/œuf (35)</label>
+        <label><input type="radio" name="breakfast" value="50">Toast + jus (50)</label>
+      </fieldset>
+      <fieldset>
+        <legend>Transport</legend>
+        <label><input type="radio" name="transport" value="60">Tuk-tuk (60)</label>
+        <label><input type="radio" name="transport" value="20">Bus (20)</label>
+        <label><input type="radio" name="transport" value="0">Marche (0)</label>
+      </fieldset>
+      <fieldset>
+        <legend>Déjeuner</legend>
+        <label><input type="radio" name="lunch" value="70">Repas local (70)</label>
+        <label><input type="radio" name="lunch" value="90">Soupe + boisson (90)</label>
+      </fieldset>
+      <fieldset>
+        <legend>Activité</legend>
+        <label><input type="radio" name="activity" value="100">Cinéma (100)</label>
+        <label><input type="radio" name="activity" value="150">Jouet pokémon (150)</label>
+        <label><input type="radio" name="activity" value="80">Lego (80)</label>
+        <label><input type="radio" name="activity" value="40">Glace mangue (40)</label>
+      </fieldset>
+      <p>Total dépensé : <span id="total-day-budget">0</span> ₹</p>
+      <button type="button" onclick="checkDayPlan()">Vérifier</button>
+      <p id="exo2-feedback"></p>
+    </form>
+  </div>
+
+  <!-- JS External -->
+  <script src="/js/module2-budget.js"></script>
+</section>
+<!-- MODULE 2 — Exercices 3 et BONUS -->
+<section class="exercise" id="module2-ex3">
+  <h2>✍️ EXERCICE 3 — Tes 3 choix les plus importants</h2>
+  <p>Parmi tout ce que tu as choisi, explique :</p>
+  <ol>
+    <li>Qu’est-ce que tu as préféré garder ?</li>
+    <li>Qu’as-tu accepté de ne pas prendre ? Pourquoi ?</li>
+    <li>Comment t’es-tu senti à la fin de la journée avec ce choix ?</li>
+  </ol>
+  <textarea id="q1" placeholder="Ta réponse n°1..." rows="3"></textarea>
+  <textarea id="q2" placeholder="Ta réponse n°2..." rows="3"></textarea>
+  <textarea id="q3" placeholder="Ta réponse n°3..." rows="3"></textarea>
+</section>
+
+<section class="exercise" id="module2-bonus">
+  <h2>🎮 EXERCICE BONUS — Si tu avais 50 bahts de plus…</h2>
+  <p>Reprends ton programme, mais ajoute 50 bahts à ton budget :</p>
+  <p>Qu’est-ce que tu aurais fait de plus ? Ou est-ce que tu aurais gardé cette somme ?</p>
+  <textarea id="bonus" placeholder="Ton idée..." rows="3"></textarea>
+  <button onclick="sendModule2Answers()">✉️ Envoyer mes réponses</button>
+</section>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Module 2 – Write a summary like a pro</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; padding: 20px; line-height: 1.6; background-color: #fdf8f2; }
+    h1, h2 { color: #3c2a21; }
+    .question-block { margin-bottom: 20px; }
+    .feedback { font-weight: bold; }
+    input[type="text"] { width: 100%; padding: 8px; margin-top: 5px; }
+    button { padding: 8px 12px; margin-top: 8px; cursor: pointer; }
+    .vocab { color: #4b0082; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Module 2 – Write a summary like a pro</h1>
+  <h2>🎌 What is Demon Slayer?</h2>
+
+  <p><strong>Text to read:</strong></p>
+  <p>
+    Demon Slayer: Kimetsu no Yaiba is a <span class="vocab" title="célèbre">popular</span> anime and manga series.
+    The main character is Tanjiro Kamado, a kind boy who sells <span class="vocab" title="charbon">charcoal</span> to help his family.
+    One day, he finds his family has been killed by <span class="vocab" title="démons">demons</span>.
+    His sister Nezuko is the only <span class="vocab" title="survivant">survivor</span>, but she has become a demon.
+    Tanjiro decides to become a Demon Slayer to protect others and find a <span class="vocab" title="remède">cure</span> for his sister.
+    He trains hard and meets new friends like Zenitsu and Inosuke.
+    Together, they fight demons and try to understand the truth behind the demon world.
+    The anime is famous for its beautiful animation and <span class="vocab" title="émouvant">emotional</span> story.
+  </p>
+
+  <h2>✏️ Questions de compréhension</h2>
+
+  <div class="question-block">
+    <label>1. What is the name of the main character?</label>
+    <input type="text" id="q1" />
+    <div id="f1" class="feedback"></div>
+  </div>
+
+  <div class="question-block">
+    <label>2. What happened to Tanjiro’s family?</label>
+    <input type="text" id="q2" />
+    <div id="f2" class="feedback"></div>
+  </div>
+
+  <div class="question-block">
+    <label>3. Why does he become a Demon Slayer?</label>
+    <input type="text" id="q3" />
+    <div id="f3" class="feedback"></div>
+  </div>
+
+  <div class="question-block">
+    <label>4. Name two of his friends.</label>
+    <input type="text" id="q4" />
+    <div id="f4" class="feedback"></div>
+  </div>
+
+  <div class="question-block">
+    <label>5. What makes the anime famous?</label>
+    <input type="text" id="q5" />
+    <div id="f5" class="feedback"></div>
+  </div>
+
+  <button onclick="checkAnswers()">Check my answers</button>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 2 – Write a summary like a pro (Part 2)</title>
+  <style>
+    body { font-family: 'Arial', sans-serif; padding: 20px; background-color: #fffdf7; }
+    h1, h2, h3 { color: #3c2a21; }
+    textarea { width: 100%; min-height: 120px; padding: 10px; margin-top: 8px; }
+    button { padding: 10px 14px; margin-top: 10px; font-size: 14px; cursor: pointer; }
+    .feedback { margin-top: 10px; font-weight: bold; }
+    .highlight { background-color: #fffae3; padding: 5px; border-left: 4px solid #f2b807; margin: 10px 0; }
+    .expressions { background: #f4f4f4; padding: 10px; border-radius: 6px; }
+  </style>
+</head>
+<body>
+
+  <h1>✍️ Guided Writing</h1>
+  <p><strong>Topic:</strong> Summarize what Demon Slayer is about. Add your personal opinion at the end.</p>
+
+  <div class="highlight">
+    <strong>Structure:</strong><br>
+    <em>INTRO</em><br>
+    – The anime Demon Slayer is about…<br>
+    – The story takes place in…<br>
+    – The main character is…<br><br>
+    <em>DEVELOPMENT</em><br>
+    – He wants to…<br>
+    – He has a sister named…<br>
+    – He meets… and they…<br>
+    – They fight against…<br><br>
+    <em>OPINION</em><br>
+    – I like this anime because…<br>
+    – My favorite character is…<br>
+    – I think the story is…<br>
+    – I would recommend it because…
+  </div>
+
+  <textarea id="summaryText" placeholder="Write your full summary here..."></textarea>
+  <button onclick="checkSummary()">Corriger mon texte</button>
+  <div id="summaryFeedback" class="feedback"></div>
+
+  <hr>
+
+  <h2>🔁 Résumé libre – Ton autre animé préféré</h2>
+  <p>Choisis un autre animé (Assassination Classroom, etc.)</p>
+
+  <label><strong>Résumé (3-5 phrases)</strong></label>
+  <textarea id="animeSummary" placeholder="Summarize your favorite anime..."></textarea>
+
+  <label><strong>Ton avis</strong></label>
+  <textarea id="animeOpinion" placeholder="Give your opinion here..."></textarea>
+
+  <button onclick="checkFree()">Vérifier mon résumé libre</button>
+  <div id="freeFeedback" class="feedback"></div>
+
+  <hr>
+
+  <h2>🧠 Useful Expressions</h2>
+  <div class="expressions">
+    <p><strong>The story is about…</strong> → L’histoire parle de…</p>
+    <p><strong>The main character is…</strong> → Le personnage principal est…</p>
+    <p><strong>He/She wants to…</strong> → Il/Elle veut…</p>
+    <p><strong>I like it because…</strong> → Je l’aime parce que…</p>
+    <p><strong>My favorite moment is when…</strong> → Mon moment préféré est quand…</p>
+    <p><strong>I would recommend it to…</strong> → Je le recommanderais à…</p>
+  </div>
+
+  <script>
+    function checkSummary() {
+      const text = document.getElementById('summaryText').value.toLowerCase();
+      const feedback = document.getElementById('summaryFeedback');
+
+      let score = 0;
+      if (text.includes("demon slayer")) score++;
+      if (text.includes("tanjiro")) score++;
+      if (text.includes("nezuko")) score++;
+      if (text.includes("because")) score++;
+      if (text.includes("i like") || text.includes("my favorite")) score++;
+
+      if (score >= 4) {
+        feedback.innerHTML = "✅ Très bon résumé ! Tu utilises bien les structures et tu as ajouté ton avis 👏";
+        feedback.style.color = "green";
+      } else if (score >= 2) {
+        feedback.innerHTML = "🟡 Tu es sur la bonne voie, mais essaie d’ajouter un peu plus de détails et ton opinion.";
+        feedback.style.color = "#d98e00";
+      } else {
+        feedback.innerHTML = "❌ Ton résumé est trop court ou manque de structure. Relis les étapes proposées ci-dessus.";
+        feedback.style.color = "red";
+      }
+    }
+
+    function checkFree() {
+      const resume = document.getElementById('animeSummary').value;
+      const avis = document.getElementById('animeOpinion').value;
+      const fb = document.getElementById('freeFeedback');
+
+      if (resume.length > 30 && avis.length > 20) {
+        fb.innerText = "✅ Super ! Tu es capable de résumer et donner ton avis. Tu peux me l’envoyer pour vérification.";
+        fb.style.color = "green";
+      } else {
+        fb.innerText = "⚠️ Essaie d’écrire un peu plus (minimum 3 phrases dans le résumé, 2 dans l’avis).";
+        fb.style.color = "orange";
+      }
+    }
+  </script>
+  <script>
+    function normalize(text) {
+      return text.toLowerCase().replace(/[^a-z0-9]/g, '');
+    }
+
+    function checkAnswers() {
+      const answers = {
+        q1: ["tanjirokamado", "tanjiro"],
+        q2: ["theywerkilledbydemons", "hisfamilywaskilled"],
+        q3: ["toprotectothersandfindacureforsister", "tohelpnezuko", "toprotectothers"],
+        q4: ["zenitsuandinosuke", "inosukeandzenitsu"],
+        q5: ["beautifulanimationandemotionalstory", "itsbeautifulandemotional"]
+      };
+
+      for (let i = 1; i <= 5; i++) {
+        const user = normalize(document.getElementById(`q${i}`).value);
+        const feedback = document.getElementById(`f${i}`);
+        const correct = answers[`q${i}`].some(ans => user.includes(ans));
+        feedback.innerText = correct ? "✅ Correct!" : "❌ Try again or re-read the paragraph.";
+        feedback.style.color = correct ? "green" : "red";
+      }
+    }
+  </script>
+</body>
+</html>

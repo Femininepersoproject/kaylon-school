@@ -1,0 +1,193 @@
+<!-- 📘 MODULE 3 – Équations logiques utiles : déduire, estimer, calculer sans X -->
+<!DOCTYPE html>
+<html lang="fr">
+         <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <title>Module 3 – Équations logiques utiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>📘 Module 3 – Équations logiques utiles</h1>
+
+    <section class="intro">
+      <h2>🌀 Histoire immersive</h2>
+      <p>🍰 Kylon est dans un petit café vietnamien. Il commande une assiette avec 4 rouleaux de printemps pour 60 bahts.<br>
+      Il regarde l’assiette, regarde le menu… puis demande :</p>
+      <blockquote>“Mais si 4 rouleaux coûtent 60 bahts, combien ça fait pour 1 ? Et si j’en prends 6 ?”</blockquote>
+      <p>C’est là que tu lui expliques que tout est une question de logique, et que le plus dur, ce n’est pas de compter, c’est de comprendre comment découper le problème.</p>
+    </section>
+
+    <section class="lesson">
+      <h2>📖 Leçon</h2>
+      <p>🧠 Une équation logique, c’est un petit mystère mathématique :<br>
+      Tu connais le total, mais pas la partie. Ou tu connais le prix d’une partie, et tu veux le tout.</p>
+      <ul>
+        <li>4 objets coûtent 60 bahts → 1 = 60 ÷ 4 = 15</li>
+        <li>1 objet coûte 20 → 3 = 20 × 3 = 60</li>
+        <li>Tu as 100 et dépenses 35 → reste = 65</li>
+      </ul>
+      <p><strong>Pas besoin de X, juste du bon sens !</strong></p>
+    </section>
+
+    <section id="ex1" class="exercise">
+      <h2>✏️ Exercice 1 — Complète les logiques</h2>
+      <ol>
+        <li>3 bracelets coûtent 90 bahts → 1 bracelet coûte <input type="number" id="q1"> bahts</li>
+        <li>1 boisson = 28 bahts → 4 boissons = <input type="number" id="q2"> bahts</li>
+        <li>Menu complet = 150 bahts ; dessert = 40, entrée = 30 → plat = <input type="number" id="q3"> bahts</li>
+        <li>5 glaces = 2 jus ; 1 glace = 20 → 1 jus = <input type="number" id="q4"> bahts</li>
+      </ol>
+      <button onclick="checkEx1()">Vérifier</button>
+      <div id="result-ex1"></div>
+    </section>
+
+    <section id="ex2" class="exercise">
+      <h2>🧠 Exercice 2 — Devine l’unité</h2>
+      <ol>
+        <li>6 rouleaux = 90 bahts → 1 rouleau = <input type="number" id="q5"></li>
+        <li>8 tickets = 160 bahts → 1 ticket = <input type="number" id="q6"></li>
+        <li>5 portions = 115 bahts → 1 portion = <input type="number" id="q7"></li>
+      </ol>
+      <button onclick="checkEx2()">Vérifier</button>
+      <div id="result-ex2"></div>
+    </section>
+
+    <section id="ex3" class="exercise">
+      <h2>🧩 Exercice 3 — Quel est le bon raisonnement ?</h2>
+      <p>Tu veux acheter 3 objets identiques pour 75 bahts. Quel est le bon raisonnement ?</p>
+      <form id="q8">
+        <label><input type="radio" name="q8" value="A"> A. Je divise 75 par 3</label><br>
+        <label><input type="radio" name="q8" value="B"> B. Je multiplie 75 par 3</label><br>
+        <label><input type="radio" name="q8" value="C"> C. Je fais 75 - 3</label><br>
+        <label><input type="radio" name="q8" value="D"> D. J’essaie au hasard</label><br>
+      </form>
+      <button onclick="checkEx3()">Vérifier</button>
+      <div id="result-ex3"></div>
+    </section>
+
+    <section id="ex4" class="exercise">
+      <h2>✍️ Exercice 4 — Résous les situations</h2>
+      <ol>
+        <li>5 figurines à 45 bahts chacune = <input type="number" id="q9"> bahts</li>
+        <li>Smoothie + sandwich = 110 ; smoothie = 35 → sandwich = <input type="number" id="q10"> bahts</li>
+        <li>100 bahts pour 4 boissons → max par boisson = <input type="number" id="q11"> bahts</li>
+      </ol>
+      <button onclick="checkEx4()">Vérifier</button>
+      <div id="result-ex4"></div>
+    </section>
+<!-- 📘 MODULE 3 – Équations logiques utiles : déduire, estimer, calculer sans X -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Module 3 – Équations logiques utiles</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>📘 Module 3 – Équations logiques utiles</h1>
+
+    <section class="intro">
+      <h2>🌀 Histoire immersive</h2>
+      <p>🍰 Kylon est dans un petit café vietnamien. Il commande une assiette avec 4 rouleaux de printemps pour 60 bahts.<br>
+      Il regarde l’assiette, regarde le menu… puis demande :</p>
+      <blockquote>“Mais si 4 rouleaux coûtent 60 bahts, combien ça fait pour 1 ? Et si j’en prends 6 ?”</blockquote>
+      <p>C’est là que tu lui expliques que tout est une question de logique, et que le plus dur, ce n’est pas de compter, c’est de comprendre comment découper le problème.</p>
+    </section>
+
+    <section class="lesson">
+      <h2>📖 Leçon</h2>
+      <p>🧠 Une équation logique, c’est un petit mystère mathématique :<br>
+      Tu connais le total, mais pas la partie. Ou tu connais le prix d’une partie, et tu veux le tout.</p>
+      <ul>
+        <li>4 objets coûtent 60 bahts → 1 = 60 ÷ 4 = 15</li>
+        <li>1 objet coûte 20 → 3 = 20 × 3 = 60</li>
+        <li>Tu as 100 et dépenses 35 → reste = 65</li>
+      </ul>
+      <p><strong>Pas besoin de X, juste du bon sens !</strong></p>
+    </section>
+
+    <section id="ex1" class="exercise">
+      <h2>✏️ Exercice 1 — Complète les logiques</h2>
+      <ol>
+        <li>3 bracelets coûtent 90 bahts → 1 bracelet coûte <input type="number" id="q1"> bahts</li>
+        <li>1 boisson = 28 bahts → 4 boissons = <input type="number" id="q2"> bahts</li>
+        <li>Menu complet = 150 bahts ; dessert = 40, entrée = 30 → plat = <input type="number" id="q3"> bahts</li>
+        <li>5 glaces = 2 jus ; 1 glace = 20 → 1 jus = <input type="number" id="q4"> bahts</li>
+      </ol>
+      <button onclick="checkEx1()">Vérifier</button>
+      <div id="result-ex1"></div>
+    </section>
+
+    <section id="ex2" class="exercise">
+      <h2>🧠 Exercice 2 — Devine l’unité</h2>
+      <ol>
+        <li>6 rouleaux = 90 bahts → 1 rouleau = <input type="number" id="q5"></li>
+        <li>8 tickets = 160 bahts → 1 ticket = <input type="number" id="q6"></li>
+        <li>5 portions = 115 bahts → 1 portion = <input type="number" id="q7"></li>
+      </ol>
+      <button onclick="checkEx2()">Vérifier</button>
+      <div id="result-ex2"></div>
+    </section>
+
+    <section id="ex3" class="exercise">
+      <h2>🧩 Exercice 3 — Quel est le bon raisonnement ?</h2>
+      <p>Tu veux acheter 3 objets identiques pour 75 bahts. Quel est le bon raisonnement ?</p>
+      <form id="q8">
+        <label><input type="radio" name="q8" value="A"> A. Je divise 75 par 3</label><br>
+        <label><input type="radio" name="q8" value="B"> B. Je multiplie 75 par 3</label><br>
+        <label><input type="radio" name="q8" value="C"> C. Je fais 75 - 3</label><br>
+        <label><input type="radio" name="q8" value="D"> D. J’essaie au hasard</label><br>
+      </form>
+      <button onclick="checkEx3()">Vérifier</button>
+      <div id="result-ex3"></div>
+    </section>
+
+    <section id="ex4" class="exercise">
+      <h2>✍️ Exercice 4 — Résous les situations</h2>
+      <ol>
+        <li>5 figurines à 45 bahts chacune = <input type="number" id="q9"> bahts</li>
+        <li>Smoothie + sandwich = 110 ; smoothie = 35 → sandwich = <input type="number" id="q10"> bahts</li>
+        <li>100 bahts pour 4 boissons → max par boisson = <input type="number" id="q11"> bahts</li>
+      </ol>
+      <button onclick="checkEx4()">Vérifier</button>
+      <div id="result-ex4"></div>
+    </section>
+
+  </main>
+
+  <script src="send-result.js"></script>
+  <script src="module3-equations.js"></script>
+</body>
+</html>

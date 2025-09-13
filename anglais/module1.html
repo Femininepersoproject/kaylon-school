@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+         <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Module 1 - Talking About What You Love</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background-color: #f8f9fa; }
+    h2 { color: #4a00e0; }
+    .vocab-table, .quiz, .results { margin-top: 20px; }
+    .vocab-table table { width: 100%; border-collapse: collapse; }
+    .vocab-table th, .vocab-table td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    .highlight { color: #d63384; font-weight: bold; }
+    .feedback { margin-top: 5px; font-weight: bold; }
+    textarea { width: 100%; height: 140px; margin-top: 10px; }
+    .btn { background: #4a00e0; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px; }
+    .btn:hover { background: #7e00e0; }
+  </style>
+</head>
+<body>
+
+  <h1>📘 Module 1 – How to talk about what you love</h1>
+
+  <section class="intro">
+    <h2>🌀 Introduction</h2>
+    <p>In English, talking about what you love = talking about yourself.<br>
+    You don't need complicated grammar, just the right words, the right verbs, and a little bit of style!</p>
+  </section>
+
+  <section class="vocab-table">
+    <h2>🔑 Essential Vocabulary</h2>
+    <table>
+      <tr><th>Verb</th><th>Example</th></tr>
+      <tr><td>I like</td><td>I like Pokémon.</td></tr>
+      <tr><td>I love</td><td>I love building with Lego.</td></tr>
+      <tr><td>I enjoy</td><td>I enjoy reading manga.</td></tr>
+      <tr><td>I’m a fan of…</td><td>I’m a fan of Demon Slayer.</td></tr>
+      <tr><td>I play</td><td>I play video games after lunch.</td></tr>
+      <tr><td>I collect</td><td>I collect Pokémon cards.</td></tr>
+      <tr><td>My favorite… is…</td><td>My favorite Pokémon is Mewtwo.</td></tr>
+    </table>
+  </section>
+
+  <section class="mini-lecture">
+    <h2>📖 The Story of Pikachu</h2>
+    <p><span class="highlight">Pikachu</span> is one of the most <span class="highlight">famous</span> Pokémon in the world.<br>
+    He is yellow, <span class="highlight">cute</span>, and has <span class="highlight">electric powers</span>.<br>
+    Pikachu was first seen in the Pokémon video games in 1996.<br>
+    Then, he became the <span class="highlight">partner</span> of Ash in the Pokémon anime.<br>
+    He is loved by millions of <span class="highlight">fans</span> around the world.<br>
+    Today, Pikachu is a <span class="highlight">global</span> icon.</p>
+  </section>
+
+  <section class="quiz">
+    <h2>🧩 Quiz – Understanding the Text</h2>
+    <ol>
+      <li>What color is Pikachu? <br>
+        <input type="text" id="q1" placeholder="Your answer here" />
+        <div class="feedback" id="f1"></div>
+      </li>
+      <li>What kind of powers does he have?<br>
+        <input type="text" id="q2" />
+        <div class="feedback" id="f2"></div>
+      </li>
+      <li>Who is his partner in the anime?<br>
+        <input type="text" id="q3" />
+        <div class="feedback" id="f3"></div>
+      </li>
+      <li>When was Pikachu first seen?<br>
+        <input type="text" id="q4" />
+        <div class="feedback" id="f4"></div>
+      </li>
+      <li>Do you like Pikachu? Why?<br>
+        <input type="text" id="q5" />
+        <div class="feedback" id="f5"></div>
+      </li>
+    </ol>
+    <button class="btn" onclick="checkAnswers()">Check Answers</button>
+  </section>
+<section class="guided-writing">
+  <h2>✍️ Guided Writing – My Favorite Pokémon</h2>
+  <p><strong>Instructions:</strong> Use the structure below to write about your favorite Pokémon.</p>
+  <ul>
+    <li>My favorite Pokémon is…</li>
+    <li>He / She is… (describe it: color, power, personality)</li>
+    <li>I like it because… (reason)</li>
+    <li>I saw it in… (game, anime, card, etc.)</li>
+    <li>If I could meet this Pokémon, I would… (imagination)</li>
+  </ul>
+
+  <textarea id="writingInput" placeholder="Write your paragraph here..."></textarea><br />
+  <button class="btn" onclick="checkWriting()">Check my writing</button>
+  <div id="writingFeedback" class="feedback"></div>
+
+  <br />
+  <button class="btn" onclick="sendToMom()">Send to mom 📩</button>
+  <div id="sendFeedback" class="feedback"></div>
+</section>
+
+<section class="bonus-phrases">
+  <h2>🎯 BONUS — Super phrases you can use</h2>
+  <table>
+    <tr><th>Expression</th><th>Usage</th></tr>
+    <tr><td>I’m really into…</td><td>To show a strong interest</td></tr>
+    <tr><td>I’ve been a fan since…</td><td>To talk about your past interest</td></tr>
+    <tr><td>It’s so cool because…</td><td>To explain your opinion</td></tr>
+    <tr><td>I always / often / sometimes…</td><td>To express frequency</td></tr>
+    <tr><td>If I could, I would…</td><td>To imagine something</td></tr>
+  </table>
+</section>
+
+<section class="correction">
+  <h2>✅ What we’re looking for</h2>
+  <ul>
+    <li>Full, simple, well-structured sentences</li>
+    <li>Use of at least 2 expressive verbs (like, enjoy, collect, etc.)</li>
+    <li>Coherence + a bit of personal justification (why)</li>
+  </ul>
+</section>
+
+<section class="real-life">
+  <h2>🧠 Real Life Application</h2>
+  <ul>
+    <li>🎙️ Record a short oral video: “My favorite Pokémon”</li>
+    <li>🧾 Make a character card or presentation with image and description</li>
+    <li>🧬 Create an imaginary Pokémon (type, powers, evolution, etc.)</li>
+  </ul>
+</section>
+
+<script>
+  function checkWriting() {
+    const input = document.getElementById("writingInput").value.trim();
+    const feedback = document.getElementById("writingFeedback");
+    const verbs = ["like", "love", "enjoy", "play", "collect", "favorite"];
+    const hasVerb = verbs.some(v => input.toLowerCase().includes(v));
+    const isLongEnough = input.split(" ").length >= 20;
+
+    if (!input) {
+      feedback.textContent = "⛔ Please write something first.";
+      feedback.style.color = "red";
+      return;
+    }
+
+    if (hasVerb && isLongEnough) {
+      feedback.textContent = "✅ Great job! Your writing looks clear and personal.";
+      feedback.style.color = "green";
+    } else if (!hasVerb) {
+      feedback.textContent = "🧐 Try to use more expressive verbs like 'like', 'enjoy', or 'collect'.";
+      feedback.style.color = "orange";
+    } else if (!isLongEnough) {
+      feedback.textContent = "✏️ Good start! Add more detail to reach at least 5 full sentences.";
+      feedback.style.color = "orange";
+    }
+  }
+
+  function sendToMom() {
+    const input = document.getElementById("writingInput").value.trim();
+    const feedback = document.getElementById("sendFeedback");
+
+    if (!input) {
+      feedback.textContent = "📭 You must write something before sending.";
+      feedback.style.color = "red";
+      return;
+    }
+
+    feedback.textContent = "✅ Message sent to mom! She's going to love it 💌";
+    feedback.style.color = "green";
+
+    // optional: simulate sending result via API
+    // fetch("/api/send-result", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify({ writing: input, module: "english-module-1" })
+    // });
+  }
+</script>
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "yellow",
+        q2: "electric powers",
+        q3: "ash",
+        q4: "1996"
+      };
+
+      let correct = 0;
+
+      for (let i = 1; i <= 4; i++) {
+        let input = document.getElementById("q" + i).value.toLowerCase().trim();
+        let feedback = document.getElementById("f" + i);
+        if (input === answers["q" + i]) {
+          feedback.textContent = "✅ Correct!";
+          feedback.style.color = "green";
+          correct++;
+        } else {
+          feedback.textContent = `❌ Not quite. Hint: read the text again.`;
+          feedback.style.color = "red";
+        }
+      }
+
+      // Question 5 is open
+      let f5 = document.getElementById("f5");
+      let q5 = document.getElementById("q5").value.trim();
+      if (q5.length >= 5) {
+        f5.textContent = "✅ Nice personal answer!";
+        f5.style.color = "green";
+      } else {
+        f5.textContent = "💡 Try to say more!";
+        f5.style.color = "orange";
+      }
+    }
+    
+  </script>
+</body>
+</html>
+  
+</body>
+</html>

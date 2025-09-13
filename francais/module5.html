@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+     <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 5 - Champ lexical</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <section class="intro">
+      <h1>📘 Module 5 — Champ lexical : choisir ses mots comme des trésors</h1>
+      <p>Bienvenue, Kylon, dans une nouvelle mission d'écriture magique ! Aujourd'hui, tu vas apprendre à choisir tes mots comme un aventurier choisit ses outils. Prêt ?</p>
+    </section>
+
+    <section class="partie">
+      <h2>🌀 Partie 1 – Le chasseur de mots</h2>
+      <p>Kylon voyage d’un pays à l’autre avec son sac à mots. Dans chaque endroit, il capture des mots spéciaux liés à ce qu’il voit, ressent ou découvre...</p>
+      <p><em>“Ce n’est pas le nombre de mots qui compte… mais comment tu les ranges dans ton esprit.”</em></p>
+    </section>
+
+    <section class="partie">
+      <h2>📖 Partie 2 — La leçon</h2>
+      <p><strong>Qu’est-ce qu’un champ lexical ?</strong><br>
+        C’est un groupe de mots qui tournent autour du même sujet ou de la même idée.</p>
+      <p><strong>Exemples :</strong></p>
+      <ul>
+        <li><strong>Temple :</strong> encens, moine, silence, statue, pierre, or, méditation</li>
+        <li><strong>Pokémon de feu :</strong> flamme, attaque, volcan, rouge, chaleur, brûler, dragon</li>
+      </ul>
+      <p><em>Astuce : pense aux mots liés à un lieu ou un objet quand tu veux décrire.</em></p>
+    </section>
+  </main>
+
+  <script src="/module5.js"></script>
+  <!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 5 - Champ Lexical</title>
+  <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+  <main>
+    <h1>✨ MODULE 5 — Champ lexical : choisir ses mots comme des trésors</h1>
+    <section class="objectifs">
+      <h2>🌟 Objectifs</h2>
+      <ul>
+        <li>Comprendre ce qu’est un champ lexical</li>
+        <li>Enrichir son vocabulaire</li>
+        <li>Regrouper les mots par thème</li>
+        <li>Utiliser les synonymes, nuances et outils mémoriels</li>
+      </ul>
+    </section>
+
+    <section class="histoire">
+      <h2>🌀 Histoire immersive : Le chasseur de mots</h2>
+      <p>Kylon voyage avec son sac à mots et découvre le pouvoir de bien les classer.</p>
+    </section>
+
+    <section class="lecon">
+      <h2>🔍 Leçon vivante : Qu’est-ce qu’un champ lexical ?</h2>
+      <p>Un champ lexical est un groupe de mots tournant autour d’une même idée.</p>
+      <p><strong>Exemples :</strong></p>
+      <ul>
+        <li><strong>Temple :</strong> encens, moine, silence, statue...</li>
+        <li><strong>Pokémon de feu :</strong> flamme, volcan, rouge, dragon...</li>
+      </ul>
+    </section>
+
+    <section class="exercice" id="ex1">
+      <h2>✏️ Exercice 1 - Classe les mots</h2>
+      <p>Place les mots dans les bons champs lexicaux :</p>
+      <div id="drag-container">
+        <div class="words">encens, tomate, moine, pastèque, silence, assiette, méditation, riz, statue, sauce</div>
+        <div class="zones">
+          <div class="zone" data-type="temple">🔯 Temple</div>
+          <div class="zone" data-type="cuisine">🍽️ Cuisine</div>
+          <div class="zone" data-type="meditation">🧘‍♀️ Méditation</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="exercice" id="ex2">
+      <h2>✍️ Exercice 2 - Carte mentale</h2>
+      <p>Choisis un mot et trouve 6 mots autour :</p>
+      <select id="central-word">
+        <option>dragon</option>
+        <option>marché</option>
+        <option>Pokémon</option>
+        <option>voyage</option>
+      </select>
+      <div class="inputs">
+        <input type="text" placeholder="mot 1" />
+        <input type="text" placeholder="mot 2" />
+        <input type="text" placeholder="mot 3" />
+        <input type="text" placeholder="mot 4" />
+        <input type="text" placeholder="mot 5" />
+        <input type="text" placeholder="mot 6" />
+      </div>
+    </section>
+
+    <section class="exercice" id="ex3">
+      <h2>🧠 Exercice 3 - Remplace les répétitions</h2>
+      <p>Réécris le texte avec des mots variés :</p>
+      <textarea rows="4">Le feu était rouge. Le feu était chaud...</textarea>
+      <button onclick="checkRepetition()">Vérifier</button>
+    </section>
+
+    <section class="exercice" id="ex4">
+      <h2>✨ Exercice 4 - Mon mini champ lexical</h2>
+      <p>Écris 8 mots autour du thème que tu choisis :</p>
+      <input type="text" placeholder="Thème choisi (ex : volcan)" />
+      <div class="inputs">
+        <input type="text" placeholder="mot 1" />
+        <input type="text" placeholder="mot 2" />
+        <input type="text" placeholder="mot 3" />
+        <input type="text" placeholder="mot 4" />
+        <input type="text" placeholder="mot 5" />
+        <input type="text" placeholder="mot 6" />
+        <input type="text" placeholder="mot 7" />
+        <input type="text" placeholder="mot 8" />
+      </div>
+    </section>
+
+    <section class="exercice" id="bonus">
+      <h2>🏰 Bonus - Intrus dans le sac</h2>
+      <p>Repère l’intrus :</p>
+      <ul>
+        <li><strong>Sac 1:</strong> moine, encens, statue, scooter, méditation, silence</li>
+        <li><strong>Sac 2:</strong> volcan, flamme, feu, chaud, papillon, explosion</li>
+        <li><strong>Sac 3:</strong> rivière, mangue, bateau, eau, pluie, dragon</li>
+      </ul>
+    </section>
+
+    <section class="submit">
+      <h2>✉️ Envoie ton travail</h2>
+      <button id="sendResult">Envoyer mes réponses</button>
+    </section>
+  </main>
+  <script src="/scripts/module5-exercises.js"></script>
+  
+</body>
+</html>
+
+</body>
+</html>

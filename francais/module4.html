@@ -1,0 +1,268 @@
+<!-- 📘 MODULE 4 – "Les fonctions dans la phrase : Sujet, Verbe, Complément" -->
+<!-- Partie 1 et Partie 2 avec le début des exercices inclus -->
+<!DOCTYPE html>
+<html lang="fr">
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module 4 - Fonctions dans la phrase</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/js/module4.js"></script>
+</head>
+<body>
+  <main>
+    <h1>📘 MODULE 4 – "Les fonctions dans la phrase : Sujet, Verbe, Complément"</h1>
+    <section>
+      <h2>🎯 Objectif pédagogique</h2>
+      <ul>
+        <li>Comprendre la structure de base d’une phrase simple (Sujet / Verbe / Complément)</li>
+        <li>Savoir repérer et nommer les fonctions des mots</li>
+        <li>Améliorer la syntaxe, l’expression et la logique de pensée</li>
+        <li>Pratiquer avec des phrases réelles et des exercices créatifs</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌀 Partie 1 – Histoire immersive : Le plan du temple oublié</h2>
+      <p>🗺️ Kylon explore un vieux temple dans les rues de Da Nang.<br>
+      Sur le mur, il découvre une phrase mystère gravée dans la pierre :</p>
+      <blockquote><strong>"Le dragon protège la perle."</strong></blockquote>
+      <p>En dessous, une autre inscription dit :</p>
+      <blockquote><em>"Celui qui connaît la fonction de chaque mot obtiendra la sagesse du gardien."</em></blockquote>
+      <p>Il comprend que ce n’est pas juste une phrase. C’est un code sacré, à décrypter…</p>
+    </section>
+
+    <section>
+      <h2>📖 Partie 2 — Leçon simple et vivante</h2>
+      <p>
+        ✨ Une phrase, c’est un peu comme une équipe :
+        <ul>
+          <li><strong>Le Sujet</strong> → C’est celui qui fait l’action (la personne, l’animal, la chose)</li>
+          <li><strong>Le Verbe</strong> → C’est ce qui se passe, l’action, l’état</li>
+          <li><strong>Le Complément</strong> → C’est à qui ? quoi ? où ? quand ? comment ?</li>
+        </ul>
+        🧠 <strong>Astuce :</strong> une phrase peut exister sans complément, mais jamais sans verbe
+      </p>
+    </section>
+
+    <section>
+      <h3>🌰 Exemple 1 :</h3>
+      <p>"Le chat mange la souris."</p>
+      <ul>
+        <li>Sujet = Le chat</li>
+        <li>Verbe = mange</li>
+        <li>Complément = la souris</li>
+      </ul>
+
+      <h3>🌰 Exemple 2 :</h3>
+      <p>"Kylon observe les poissons dans la rivière."</p>
+      <ul>
+        <li>Sujet = Kylon</li>
+        <li>Verbe = observe</li>
+        <li>Complément = les poissons dans la rivière</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧪 EXERCICE 1 — Découpe la phrase</h2>
+      <p>Lis les phrases suivantes et sépare les 3 éléments : Sujet / Verbe / Complément</p>
+      <form id="ex1-form">
+        <div class="phrase-group">
+          <label>1. Le singe vole une banane</label><br>
+          <input type="text" name="sujet1" placeholder="Sujet">
+          <input type="text" name="verbe1" placeholder="Verbe">
+          <input type="text" name="complement1" placeholder="Complément">
+        </div>
+        <div class="phrase-group">
+          <label>2. Kylon construit un pont en Lego</label><br>
+          <input type="text" name="sujet2">
+          <input type="text" name="verbe2">
+          <input type="text" name="complement2">
+        </div>
+        <div class="phrase-group">
+          <label>3. La pluie tombe doucement sur les feuilles</label><br>
+          <input type="text" name="sujet3">
+          <input type="text" name="verbe3">
+          <input type="text" name="complement3">
+        </div>
+        <div class="phrase-group">
+          <label>4. Les touristes photographient les éléphants</label><br>
+          <input type="text" name="sujet4">
+          <input type="text" name="verbe4">
+          <input type="text" name="complement4">
+        </div>
+        <div class="phrase-group">
+          <label>5. Nya boit un jus de fruit</label><br>
+          <input type="text" name="sujet5">
+          <input type="text" name="verbe5">
+          <input type="text" name="complement5">
+        </div>
+        <button type="submit">Vérifier mes réponses</button>
+      </form>
+      <div id="ex1-result"></div>
+    </section>
+<!-- Partie 3 - Suite des exercices -->
+
+<section class="section">
+  <h2>🔁 EXERCICE 2 — Trouve la fonction</h2>
+  <p>Dis si c’est un sujet, un verbe ou un complément :</p>
+  <form id="ex2-form">
+    <div class="question-block">
+      <label>1. “regarde”</label>
+      <select name="q1">
+        <option value="">—</option>
+        <option value="sujet">Sujet</option>
+        <option value="verbe">Verbe</option>
+        <option value="complement">Complément</option>
+      </select>
+    </div>
+    <div class="question-block">
+      <label>2. “le temple abandonné”</label>
+      <select name="q2">
+        <option value="">—</option>
+        <option value="sujet">Sujet</option>
+        <option value="verbe">Verbe</option>
+        <option value="complement">Complément</option>
+      </select>
+    </div>
+    <div class="question-block">
+      <label>3. “les enfants”</label>
+      <select name="q3">
+        <option value="">—</option>
+        <option value="sujet">Sujet</option>
+        <option value="verbe">Verbe</option>
+        <option value="complement">Complément</option>
+      </select>
+    </div>
+    <div class="question-block">
+      <label>4. “sautent”</label>
+      <select name="q4">
+        <option value="">—</option>
+        <option value="sujet">Sujet</option>
+        <option value="verbe">Verbe</option>
+        <option value="complement">Complément</option>
+      </select>
+    </div>
+    <div class="question-block">
+      <label>5. “dans la jungle”</label>
+      <select name="q5">
+        <option value="">—</option>
+        <option value="sujet">Sujet</option>
+        <option value="verbe">Verbe</option>
+        <option value="complement">Complément</option>
+      </select>
+    </div>
+    <div class="question-block">
+      <label>6. “les moines”</label>
+      <select name="q6">
+        <option value="">—</option>
+        <option value="sujet">Sujet</option>
+        <option value="verbe">Verbe</option>
+        <option value="complement">Complément</option>
+      </select>
+    </div>
+  </form>
+</section>
+
+<section class="section">
+  <h2>✏️ EXERCICE 3 — Phrase désordonnée</h2>
+  <form id="ex3-form">
+    <label>1. mange / Kylon / une mangue</label>
+    <input type="text" name="q1" placeholder="Réponse">
+    <label>2. du temple / gardent / Les chiens / l’entrée</label>
+    <input type="text" name="q2">
+    <label>3. un smoothie / Nya / prépare / à la pastèque</label>
+    <input type="text" name="q3">
+  </form>
+</section>
+
+<section class="section">
+  <h2>🎯 EXERCICE 4 — Invente ta propre phrase sacrée</h2>
+  <textarea id="ex4-text" rows="5" placeholder="Ex: Le dragon ouvre un passage secret."></textarea>
+</section>
+
+<section class="section">
+  <h2>🧩 EXERCICE BONUS – Le parchemin invisible</h2>
+  <p>Complète cette phrase magique :</p>
+  <input type="text" name="bonus1" placeholder="Sujet (ex: Le tigre)">
+  <input type="text" name="bonus2" placeholder="Complément (ex: une banane)">
+  <input type="text" name="bonus3" placeholder="Lieu (ex: la forêt)">
+</section>
+
+<section class="section">
+  <button id="submitAll">📩 Envoyer toutes mes réponses</button>
+</section>
+
+<script>
+  document.getElementById("submitAll").addEventListener("click", async () => {
+    const form2 = document.getElementById("ex2-form");
+    const form3 = document.getElementById("ex3-form");
+    const formData = {
+      module: "Module 4 – Fonctions sujet/verbe/complément",
+      exercice2: {
+        q1: form2.q1.value,
+        q2: form2.q2.value,
+        q3: form2.q3.value,
+        q4: form2.q4.value,
+        q5: form2.q5.value,
+        q6: form2.q6.value,
+      },
+      exercice3: {
+        q1: form3.q1.value,
+        q2: form3.q2.value,
+        q3: form3.q3.value,
+      },
+      exercice4: document.getElementById("ex4-text").value,
+      bonus: {
+        sujet: document.querySelector('[name="bonus1"]').value,
+        complement: document.querySelector('[name="bonus2"]').value,
+        lieu: document.querySelector('[name="bonus3"]').value,
+      },
+    };
+
+    const response = await fetch('/api/send-result.js', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(formData)
+    });
+
+    if (response.ok) {
+      alert("✅ Bravo ! Tes réponses ont été envoyées.");
+    } else {
+      alert("❌ Une erreur est survenue.");
+    }
+  });
+</script>
+  </main>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+      <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaylon School - Module 2 : Accords</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="../js/exo-accords.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🌸 MODULE 2 – FRANÇAIS : L’accord dans le groupe nominal</h1>
+    <p><strong>Titre :</strong> “Le vendeur d’objets magiques”</p>
+  </header>
+
+  <section class="objectif">
+    <h2>🎯 Objectifs</h2>
+    <ul>
+      <li>Identifier un groupe nominal (déterminant + nom + adjectif)</li>
+      <li>Comprendre le genre et le nombre</li>
+      <li>Apprendre à accorder les mots ensemble</li>
+      <li>Corriger des erreurs dans une phrase</li>
+    </ul>
+  </section>
+
+  <section class="story">
+    <h2>🌀 INTRO : La petite histoire</h2>
+    <p>
+      🧙‍♂️ Il était une fois à Bangkok, dans une ruelle cachée, un vieil homme vendait des objets étranges : <br>
+      des lunettes qui lisent les pensées, des gommes qui effacent les mauvais rêves, et des stylos qui écrivent tout seuls.<br>
+      Il avait un cahier magique, mais ce cahier n’acceptait que les phrases bien accordées...<br>
+      Le vieil homme dit à Kylon : “Tu veux mon cahier ? Alors montre-moi que tu sais accorder les groupes nominaux !”
+    </p>
+  </section>
+
+  <section class="lesson">
+    <h2>🧠 Leçon rapide</h2>
+    <p>
+      Un <strong>groupe nominal</strong> est composé de :
+      <ul>
+        <li><strong>Le déterminant</strong> : le, la, les, un, une...</li>
+        <li><strong>Le nom</strong> : robe, dragon, scooter...</li>
+        <li><strong>L’adjectif</strong> : rouge, magique, rapide...</li>
+      </ul>
+    </p>
+    <p>
+      <strong>Rappel :</strong> tous les mots doivent s’accorder (masculin/féminin, singulier/pluriel).<br>
+      Exemples :
+      <ul>
+        <li>✅ Un scooter rapide</li>
+        <li>✅ Des robes rouges</li>
+        <li>❌ Une dragon rouge → <strong>Un</strong> dragon rouge</li>
+      </ul>
+    </p>
+  </section>
+
+  <section class="exo">
+    <h2>💡 EXERCICE 1 – Complète les accords</h2>
+    <form id="exo1">
+      <div class="line"><label>1. <input name="det1" placeholder="déterminant"> robe <input name="adj1" placeholder="adjectif"> (bleu)</label></div>
+      <div class="line"><label>2. <input name="det2"> stylos <input name="adj2"> (intelligent)</label></div>
+      <div class="line"><label>3. <input name="det3"> éléphant <input name="adj3"> (sacré)</label></div>
+      <div class="line"><label>4. <input name="det4"> mangues <input name="adj4"> (mûr)</label></div>
+      <button type="submit">Vérifier</button>
+      <p id="feedback1"></p>
+    </form>
+  </section>
+
+  <section class="exo">
+    <h2>🧠 EXERCICE 2 – Corrige les erreurs</h2>
+    <form id="exo2">
+      <div><label>1. <input name="corr1" value="Des dragon rouges"></label></div>
+      <div><label>2. <input name="corr2" value="Une stylos magique"></label></div>
+      <div><label>3. <input name="corr3" value="Les fille courageux"></label></div>
+      <div><label>4. <input name="corr4" value="Un baskets vert"></label></div>
+      <button type="submit">Vérifier</button>
+      <p id="feedback2"></p>
+    </form>
+  </section>
+
+  <section class="exo">
+    <h2>✨ EXERCICE 3 – Crée ton propre groupe magique</h2>
+    <form id="exo3">
+      <label>
+        Un(e) <input name="magicobj" placeholder="nom magique"> <input name="magicadj" placeholder="adjectif">
+      </label>
+      <button type="submit">Envoyer</button>
+      <p id="feedback3"></p>
+    </form>
+  </section>
+
+  <section class="exo">
+    <h2>🎁 MISSION BONUS – Trouve les groupes nominaux</h2>
+    <p>
+      “Dans la ruelle, une jeune fille portait un sac étrange. Les touristes curieux observaient des éléphants blancs. <br>
+      Un enfant timide s’approcha d’un marchand souriant. Les mangues dorées brillaient sous le soleil.”
+    </p>
+    <form id="exo4">
+      <input name="group1" placeholder="Groupe 1">
+      <input name="group2" placeholder="Groupe 2">
+      <input name="group3" placeholder="Groupe 3">
+      <input name="group4" placeholder="Groupe 4">
+      <button type="submit">Valider</button>
+      <p id="feedback4"></p>
+    </form>
+  </section>
+
+  <footer>
+    <button id="finishLesson">✅ J'ai terminé cette leçon</button>
+  </footer>
+</body>
+<script src="exo-accords.js" defer></script>
+</html>

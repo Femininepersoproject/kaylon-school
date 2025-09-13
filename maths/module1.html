@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+     <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdf6ec;
+      color: #333;
+      line-height: 1.6;
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: #8b4d1f;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th, td {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    .exo {
+      background-color: #fff8e1;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Module 1 – Logique & Conversions</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="module">
+    <h1>📘 MODULE 1 – Logique & conversions : calculs de la vie réelle</h1>
+    <section>
+      <h2>🌟 Objectifs</h2>
+      <ul>
+        <li>Convertir euros/bahts/dongs avec logique</li>
+        <li>Poser des équivalences simples</li>
+        <li>Résoudre des problèmes de la vie quotidienne</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌐 Intro vivante : Kylon et le bon taux</h2>
+      <p>
+        Kylon veut s'acheter un dessert à 65 bahts à Bangkok. Si 100€ = 3 800 bahts,
+        combien ça fait en euros ?
+      </p>
+    </section>
+
+    <section>
+      <h2>🧠 La Leçon</h2>
+      <p>Si 100€ = 3 800 bahts, alors :</p>
+      <ul>
+        <li>1€ = 38 bahts</li>
+        <li>1 baht = 0,026€</li>
+      </ul>
+      <p>Calculer en euros = diviser par 38. En bahts = multiplier par 38.</p>
+    </section>
+
+    <section>
+      <h2>✏️ Exercice 1 — Devine le prix</h2>
+      <p>Taux : 100€ = 3 800 bahts (donc 1€ = 38 bahts)</p>
+      <ol>
+        <li>190 bahts = <input type="number" id="q1"> €</li>
+        <li>57 bahts = <input type="number" id="q2"> €</li>
+        <li>20€ = <input type="number" id="q3"> bahts</li>
+        <li>3 objets à 300 bahts = <input type="number" id="q4"> €</li>
+      </ol>
+      <button onclick="checkAnswers1()">Vérifier</button>
+      <div id="feedback1"></div>
+    </section>
+
+    <section>
+      <h2>🧠 Exercice 2 — Logique inverse</h2>
+      <ul>
+        <li>76 bahts = <input type="number" id="inv1"> €</li>
+        <li>180 bahts pour 2 objets = <input type="number" id="inv2"> bahts</li>
+        <li>325 bahts pour 5 portions = <input type="number" id="inv3"> bahts</li>
+      </ul>
+      <button onclick="checkAnswers2()">Vérifier</button>
+      <div id="feedback2"></div>
+    </section>
+
+    <section>
+      <h2>🤖 Exercice 3 — Mini enquêtes</h2>
+      <h3>Scénario 1 :</h3>
+      <p>Kylon a 300 bahts. Il veut :</p>
+      <ul>
+        <li>Pad thaï : 75 bahts</li>
+        <li>Jus de mangue : 65 bahts</li>
+        <li>Dessert : 88 bahts</li>
+      </ul>
+      <p>→ Peut-il tout prendre ? <input id="s1_1"></p>
+      <p>→ Que supprimer pour ne pas dépasser ? <input id="s1_2"></p>
+      <p>→ Combien restera-t-il ? <input id="s1_3"></p>
+
+      <h3>Scénario 2 :</h3>
+      <p>Il a 10€. Jouet = 340 bahts. Peut-il se le permettre ? <input id="s2_1"></p>
+      <button onclick="checkScenarios()">Vérifier</button>
+      <div id="feedback3"></div>
+    </section>
+
+    <section>
+      <h2>✍️ Exercice 4 — Ton menu perso</h2>
+      <table>
+        <thead>
+          <tr><th>Plat</th><th>Prix (bahts)</th><th>Prix (€)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td><input></td><td><input></td><td><input></td></tr>
+          <tr><td><input></td><td><input></td><td><input></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="module1-exercises.js"></script>
+</body>
+</html>
